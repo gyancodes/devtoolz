@@ -2,43 +2,30 @@ import React from 'react'
 
 const Stats = () => {
   return (
-    <div>
-      <div className=" flex flex-col md:flex-row bg-none gap-2">
-  <div className="flex flex-row m-auto bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 p-6 gap-8 rounded-lg border-2 border-purple-500">
-    <div className="my-auto">
-      <div className="text-lg text-purple-300">Free Tools</div>
-      <div className="text-4xl text-purple-100">622k</div>
-    </div>
-    <div className="text-purple-300 my-auto bg-gradient-to-l from-purple-700 via-purple-800 to-purple-900 rounded-full p-4">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
-      </svg>
-    </div>
-  </div>
-  <div className="flex flex-row m-auto bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 p-6 gap-8 rounded-lg border-2 border-purple-500">
-    <div className="my-auto">
-      <div className="text-lg text-purple-300">Downloads</div>
-      <div className="text-4xl text-purple-100">622k</div>
-    </div>
-    <div className="text-purple-300 my-auto bg-gradient-to-l from-purple-700 via-purple-800 to-purple-900 rounded-full p-4">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
-      </svg>
+    <>
+    <section class="text-white body-font">
+  <div class="container px-8 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">2.7K</h2>
+        <p class="leading-relaxed">Users</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">1.8K</h2>
+        <p class="leading-relaxed">Components</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">35</h2>
+        <p class="leading-relaxed">Downloads</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">4</h2>
+        <p class="leading-relaxed">Usage</p>
+      </div>
     </div>
   </div>
-  <div className="flex flex-row m-auto bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 p-6 gap-8 rounded-lg border-2 border-purple-500">
-    <div className="my-auto">
-      <div className="text-lg text-purple-300">Total Users</div>
-      <div className="text-4xl text-purple-100">622k</div>
-    </div>
-    <div className="text-purple-300 my-auto bg-gradient-to-l from-purple-700 via-purple-800 to-purple-900 rounded-full p-4">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
-      </svg>
-    </div>
-  </div>
-</div>
-    </div>
+</section>
+    </>
   )
 }
 

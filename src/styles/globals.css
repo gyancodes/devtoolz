@@ -19,12 +19,13 @@
 }
 
 body {
-  background-image: radial-gradient(
-    at left bottom,
-    rgb(15, 23, 42),
-    rgb(88, 28, 135),
-    rgb(15, 23, 42)
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgb(7, 22, 62); 
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+
