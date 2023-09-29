@@ -1,12 +1,15 @@
 import "@/styles/globals.css";
 import Navbar from "./components/Navbar";
+import LoadingBar from "react-top-loading-bar";
 import Footer from "./components/Footer";
-import { useEffect } from "react";
+import { Toaster,toast } from "react-hot-toast";
+import { useEffect,useState } from "react";
+import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   const [progress, setProgress] = useState(0)
   const [key , setKey] = useState(0)
   const [user,setUser]=useState(false);
-  const router=useRouter();
   useEffect(() => {
     import('preline')
   }, [])
