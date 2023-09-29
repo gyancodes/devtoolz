@@ -1,11 +1,7 @@
-import '@/styles/globals.css'
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import LoadingBar from 'react-top-loading-bar';
-import { useRouter } from 'next/router'
-import { useEffect,useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast'
-// import { HeroSection } from './Components/layouts/HeroSection'
+import "@/styles/globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { useEffect } from "react";
 export default function App({ Component, pageProps }) {
   const [progress, setProgress] = useState(0)
   const [key , setKey] = useState(0)
