@@ -31,7 +31,7 @@ const Hero = () => {
                     <a
                         href="#"
                         title=""
-                        className="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
+                        className="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-200 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
                         role="button"
                     >
                         <svg className="w-5 h-5 mr-2" viewBox="0 0 18 18" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@ const Hero = () => {
                     </a>
                 </div>
 
-                <p className="mt-8 text-base text-gray-500 font-inter">60 Days free trial · No credit card required</p>
+                <p className="mt-8 text-base text-gray-400 font-inter">60 Days free trial · No credit card required</p>
             </div>
         </div>
 
