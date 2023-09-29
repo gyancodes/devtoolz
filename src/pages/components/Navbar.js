@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link href="/"
               className="flex-none text-xl font-semibold dark:text-white text-white"
             >
-            <img src="/asset/devtoolz_nobg.png" alt="" className="h-28 w-28 "/>
+            <img src="/asset/Devtoolzlogo-nobg.png" alt="" className="h-5/6 w-28 "/>
             </Link>
             <div className="md:hidden">
               <button
