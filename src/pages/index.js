@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Head from 'next/head'
+import Hero from './components/Hero'
 const Index = () => {
   return (
     <div>
-      Hello We are devtoolz we are coming soon!
+      <Hero/>
     </div>
   )
 }
