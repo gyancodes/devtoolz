@@ -2,10 +2,10 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='sticky top-0 backdrop-blur-lg'>
-      <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm ">
+    <div className='sticky top-0'>
+      <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
 
-  <nav className="mt-6 relative max-w-7xl w-full border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto bg-none" aria-label="Global">
+  <nav className="mt-6 backdrop-blur-lg relative max-w-7xl w-full border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto bg-none" aria-label="Global">
     <div className="flex items-center justify-between ">
       <a className="flex-none text-xl font-semibold dark:text-white text-white" href="#" aria-label="Brand">Devtoolz</a>
       <div className="md:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
         <a className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white " href="#">Tools</a>
         <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
 
-          <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  md:dark:border before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
+          <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  md:dark:border dark:divide-gray-700 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
           
             <div className="hs-dropdown relative [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
             </div>
