@@ -30,7 +30,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   AI Tools
                 </h3>
               </div>
@@ -53,7 +53,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   UI Designs
                 </h3>
               </div>
@@ -76,7 +76,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   Themes
                 </h3>
               </div>
@@ -99,7 +99,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   UI Components
                 </h3>
               </div>
@@ -125,7 +125,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   Documentation Mockups
                 </h3>
               </div>
@@ -148,7 +148,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   APIs
                 </h3>
               </div>
@@ -174,7 +174,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   SDKs
                 </h3>
               </div>
@@ -197,7 +197,7 @@ const Devtools = () => {
               </div>
               {/* End Icon */}
               <div className="mt-3">
-                <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
                   Testing tools
                 </h3>
               </div>
