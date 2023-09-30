@@ -127,14 +127,20 @@ const Login = () => {
           background-size: cover;
           background-repeat: no-repeat;
           z-index: -1;
-          animation: rotate 30s linear infinite;
+          transform: translateY(-50%);
           position: absolute;
-          left: 25%;
+          left: -30%;
+          bottom: auto;
+          right: auto;
+          top: 58%;
+          animation: rotate360 10s linear infinite; /* Adjust duration as needed */
         }
-
-        @keyframes rotate {
+        @keyframes rotate360 {
+          0% {
+            transform: translateY(-50%) rotate(0deg);
+          }
           100% {
-            transform: rotate(360deg);
+            transform: translateY(-50%) rotate(360deg);
           }
         }
       `}</style>
@@ -146,7 +152,7 @@ const Login = () => {
           {loading ? (
             <Spinner />
           ) : (
-            <div className="backdrop-blur-sm">
+            <div className="">
               <div className="flex justify-center items-center min-h-screen">
                 <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
                   <div className="flex-1">

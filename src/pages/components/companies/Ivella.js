@@ -13,15 +13,8 @@ const Ivella = () => {
           font-size: 0.8rem;
         }
       `}</style>
-      <section className="mx-auto flex max-w-screen-xl flex-col px-10 xl:px-20 border-solid my-20 p-4 h-full w-full bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
-        <div className="">
-          <img
-            alt="Ivella"
-            className="mr-4 h-36 w-36 rounded-md"
-            src="https://assets.website-files.com/642540755241b4641efa9b04/64328a8b11af0deaf0a41de0_nav-logo.svg"
-          />
-        </div>
 
+      <section className="mx-auto flex max-w-screen-xl flex-col px-10 xl:px-20 border-solid my-20 p-4 h-full w-full bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
         <div className="flex flex-col">
           <h2 className="text-blue-700 text-4xl font-extrabold   ">Jobs</h2>
           <section className="flex py-10">
