@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 const Slug = () => {
   const router = useRouter();
   const { slug } = router.query;
+
+  const [searchInput, setSearchInput] = useState("");
+  const [matchingElements, setMatchingElements] = useState([]);
+
+  const handleSearchInputChange = (e) => {
+    const input = e.target.value.toLowerCase(); // Convert input to lowercase for case-insensitive search
+    setSearchInput(input);
+
+    // Filter matching elements based on the search input
+    const filteredElements = document.querySelectorAll(
+      ".text-white .text-lg"
+    ); // Select all <h2> elements
+    const matching = Array.from(filteredElements).filter((element) =>
+      element.textContent.toLowerCase().includes(input)
+    );
+
+    // Highlight matching elements
+    setMatchingElements(matching);
+  };
+
   return (
     <div className="text-white">
       {/* Hello you are searching for :- {slug} */}
@@ -29,12 +49,26 @@ const Slug = () => {
             type="text"
             placeholder="Search your tool"
             className="w-full py-3 pl-12 pr-4 text-white border rounded-md outline-none bg-black focus:bg-gray-800 focus:border-purple-800"
+            value={searchInput}
+            onChange={handleSearchInputChange}
           />
         </div>
       </form>
 
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
+
+        {matchingElements.length > 0 && (
+            <div className="mb-4">
+              <h3>Matching Elements:</h3>
+              <ul>
+                {matchingElements.map((element, index) => (
+                  <li key={index}>{element.textContent}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
               Kickstart your development with devtools
@@ -62,11 +96,11 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  Shooting Stars
+                  NLTK (Natural Language Toolkit)
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  A Python library for NLP that provides tools for tasks like
+                  tokenization, stemming, tagging, parsing.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
@@ -91,11 +125,11 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  The Catalyzer
+                  TextBlob
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  A simple and easy-to-use NLP library for Python, offering
+                  features like sentiment analysis.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
@@ -119,11 +153,11 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  Neptune
+                  Spacy
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  Already mentioned in the previous list, SpaCy is a powerful
+                  and efficient NLP library for Python.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
@@ -146,17 +180,18 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  Melanchole
+                  OpenCV.js
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  A JavaScript library for computer vision tasks, enabling image
+                  and video analysis directly in the browser.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
               </div>
             </div>
+            {/* 2nd core */}
             <div class="xl:w-1/4 md:w-1/2 p-4">
               <div class="border border-gray-200 p-6 rounded-lg">
                 <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
@@ -173,11 +208,11 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  Bunker
+                  Dlib
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  A C++ library with Python bindings for various computer vision
+                  tasks, including facial recognition and object detection.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
@@ -200,11 +235,174 @@ const Slug = () => {
                   </svg>
                 </div>
                 <h2 class="text-lg text-white font-medium title-font mb-2">
-                  Ramona Falls
+                  YOLO (You Only Look Once)
                 </h2>
                 <p class="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  An open-source real-time object detection system that can be
+                  used in web applications.
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Rasa
+                </h2>
+                <p class="leading-relaxed text-base">
+                  An open-source framework for building conversational AI
+                  chatbots. It offers both NLU and dialogue management .
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Botpress
+                </h2>
+                <p class="leading-relaxed text-base">
+                  An open-source platform for building and managing chatbots and
+                  conversational applications.
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            {/* 3rd core */}
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Surprise
+                </h2>
+                <p class="leading-relaxed text-base">
+                  A Python scikit for building and analyzing recommendation
+                  systems for different charts and systems.
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Mozilla DeepSpeech
+                </h2>
+                <p class="leading-relaxed text-base">
+                  An open-source automatic speech recognition (ASR) engine
+                  involves voice recognition software.
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Web Speech API
+                </h2>
+                <p class="leading-relaxed text-base">
+                  A web API that allows you to integrate speech recognition and
+                  synthesis into web applications.
+                </p>
+                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-purple-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-white font-medium title-font mb-2">
+                  Stable Baselines
+                </h2>
+                <p class="leading-relaxed text-base">
+                  A set of high-quality implementations of reinforcement
+                  learning algorithms in Python.
                 </p>
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
