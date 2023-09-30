@@ -307,7 +307,7 @@ const FeaturedOpenSourceProjects = () => {
               </header>
               <section className="px-4">
                 <span className="text-white text-sm">
-                  Supabase is an open source Firebase alternative. We're
+                  Supabase is an open source Firebase alternative. We are
                   building the features of Firebase using enterprise-grade open
                   source tools.
                 </span>
