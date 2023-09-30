@@ -27,14 +27,14 @@ const UserProfile = () => {
                 <div>
                   <label
                     htmlFor="first_name"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     First name
                   </label>
                   <input
                     type="text"
                     id="first_name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Name"
                     required=""
                   />
@@ -42,14 +42,14 @@ const UserProfile = () => {
                 <div>
                   <label
                     htmlFor="last_name"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     Last name
                   </label>
                   <input
                     type="text"
                     id="last_name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Kumar"
                     required=""
                   />
@@ -57,7 +57,7 @@ const UserProfile = () => {
                 <div>
                   <label
                     htmlFor="last_name"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                     required
                   >
                     Username
@@ -65,7 +65,7 @@ const UserProfile = () => {
                   <input
                     type="text"
                     id="last_name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="usercodes"
                     required=""
                   />
@@ -73,14 +73,14 @@ const UserProfile = () => {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     Company
                   </label>
                   <input
                     type="text"
                     id="company"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="DevToolz"
                     required=""
                   />
@@ -89,14 +89,14 @@ const UserProfile = () => {
                 <div>
                   <label
                     htmlFor="website"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-white"
                   >
                     Portfolio
                   </label>
                   <input
                     type="url"
                     id="website"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="https://devtoolz.tech"
                     required=""
                   />
@@ -105,14 +105,14 @@ const UserProfile = () => {
               <div className="mb-6">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Email address
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name@devtoolz.tech"
                   required=""
                 />
