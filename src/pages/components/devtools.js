@@ -15,7 +15,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +64,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +88,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +112,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +139,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +163,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +190,8 @@ const Devtools = () => {
             {/* Icon Block */}
             <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
               {/* Icon */}
-              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+              <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
                 <svg
                   className="w-7 h-7 text-white"
                   xmlns="http://www.w3.org/2000/svg"
