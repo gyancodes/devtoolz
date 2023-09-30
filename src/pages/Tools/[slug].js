@@ -12,9 +12,7 @@ const Slug = () => {
     setSearchInput(input);
 
     // Filter matching elements based on the search input
-    const filteredElements = document.querySelectorAll(
-      ".text-white .text-lg"
-    ); // Select all <h2> elements
+    const filteredElements = document.querySelectorAll(".text-white .text-lg"); // Select all <h2> elements
     const matching = Array.from(filteredElements).filter((element) =>
       element.textContent.toLowerCase().includes(input)
     );
@@ -57,8 +55,7 @@ const Slug = () => {
 
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-
-        {matchingElements.length > 0 && (
+          {matchingElements.length > 0 && (
             <div className="mb-4">
               <h3>Matching Elements:</h3>
               <ul>
@@ -103,9 +100,9 @@ const Slug = () => {
                   tokenization, stemming, tagging, parsing.
                 </p>
                 <a href="https://www.nltk.org/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -134,9 +131,9 @@ const Slug = () => {
                   features like sentiment analysis.
                 </p>
                 <a href="https://textblob.readthedocs.io/en/dev/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -164,9 +161,9 @@ const Slug = () => {
                   and efficient NLP library for Python.
                 </p>
                 <a href="https://spacy.io/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -193,9 +190,9 @@ const Slug = () => {
                   and video analysis directly in the browser.
                 </p>
                 <a href="https://docs.opencv.org/3.4/df/d0a/tutorial_js_intro.html">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -223,9 +220,9 @@ const Slug = () => {
                   tasks, including facial recognition and object detection.
                 </p>
                 <a href="http://dlib.net/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -252,9 +249,9 @@ const Slug = () => {
                   used in web applications.
                 </p>
                 <a href="https://pjreddie.com/darknet/yolo/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -281,9 +278,9 @@ const Slug = () => {
                   chatbots. It offers both NLU and dialogue management .
                 </p>
                 <a href="https://rasa.com/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -310,9 +307,9 @@ const Slug = () => {
                   conversational applications.
                 </p>
                 <a href="https://botpress.com/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -340,9 +337,9 @@ const Slug = () => {
                   systems for different charts and systems.
                 </p>
                 <a href="https://pypi.org/project/scikit-surprise/1.0.2/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -369,9 +366,9 @@ const Slug = () => {
                   involves voice recognition software.
                 </p>
                 <a href="https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -398,9 +395,9 @@ const Slug = () => {
                   synthesis into web applications.
                 </p>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
@@ -427,9 +424,9 @@ const Slug = () => {
                   learning algorithms in Python.
                 </p>
                 <a href="https://stable-baselines.readthedocs.io/en/master/">
-                <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
-                  Learn more
-                </button>
+                  <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
+                    Learn more
+                  </button>
                 </a>
               </div>
             </div>
