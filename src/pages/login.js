@@ -133,7 +133,7 @@ const Login = () => {
           bottom: auto;
           right: auto;
           top: 58%;
-          animation: rotate360 10s linear infinite; /* Adjust duration as needed */
+          animation: rotate360 30s linear infinite; /* Adjust duration as needed */
         }
         @keyframes rotate360 {
           0% {
