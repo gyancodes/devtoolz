@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const Navbar = () => {
+  const router = useRouter();
+  const [user, setUser] = useState(null);
+  useEffect(() => { 
+    if(JSON.parse(localStorage.getItem('DevToolzUser'))){
+    setUser(JSON.parse(localStorage.getItem('DevToolzUser')));
+    }
+  }, []);
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-0 z-50 Navbar">
       <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm sm:h-10 lg:h-24">
         <nav
           className="mt-6 backdrop-blur-lg relative max-w-7xl w-full border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto bg-none"
@@ -74,13 +82,19 @@ const Navbar = () => {
               >
                 Team
               </Link>
+              {user&&<Link
+                className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white "
+                href="/UserProfile"
+              >
+                My Profile
+              </Link>}
               <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
                 <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  md:dark:border dark:divide-gray-700 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
                   <div className="hs-dropdown relative [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]"></div>
                 </div>
               </div>
 
-              <Link
+              {!user&&<Link
                 href="/login?user=true"
                 className="flex items-center gap-x-2 font-medium text-white hover:text-blue-600 md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
               >
@@ -95,7 +109,27 @@ const Navbar = () => {
                   <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                 </svg>
                 Log in
-              </Link>
+              </Link>}
+              {user&&<button
+                onClick={() => {
+                  localStorage.removeItem('DevToolzUser');
+                  setUser(null);
+                  router.push("/")
+                }}
+                className="flex items-center gap-x-2 font-medium text-white hover:text-blue-600 md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
+              >
+                <svg
+                  className="w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+                Log Out
+              </button>}
             </div>
           </div>
         </nav>
