@@ -30,7 +30,7 @@ const Login = () => {
       setLoading(true);
       if (router.query.user) {
         const data = { email, password };
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/ulogin`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/login`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const Login = () => {
           });
 
           localStorage.setItem(
-            "e-reviveUser",
+            "DevToolzUser",
             JSON.stringify({ token: response.token, email: response.email })
           );
           setTimeout(() => {
@@ -58,10 +58,10 @@ const Login = () => {
           });
           setLoading(false);
         }
-      } else if (router.query.recycler) {
+      } else if (router.query.admin) {
         setLoading(true);
         const data = { email, password };
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/rlogin`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/adminlogin`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -86,7 +86,36 @@ const Login = () => {
           setLoading(false);
         }
       }
+    else if (router.query.recuiter) {
+      setLoading(true);
+      const data = { email, password };
+      const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/recuiterlogin`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const response = await res.json();
+      console.log(response);
+      if (response.success) {
+        toast.success("Recuiter Logged in successfully", {
+          position: "top-right",
+        });
+        localStorage.setItem(
+          "e-reviveRecycler",
+          JSON.stringify({ token: response.token, email: response.email })
+        );
+        setLoading(false);
+      } else if (!response.success) {
+        toast.error(`${response.message}`, {
+          position: "top-right",
+        });
+        setLoading(false);
+      }
     }
+  }
+    
   };
   return (
     <div>
@@ -133,7 +162,7 @@ const Login = () => {
                     />
                   </div>
 
-                  <div className="mt-6 relative">
+                  <div className="mt-6">
                     <div className="flex justify-between mb-2">
                       <label
                         htmlFor="password"
@@ -156,7 +185,7 @@ const Login = () => {
                       value={password}
                       onChange={handleChanges}
                       placeholder="Your Password"
-                      className="block w-full px-4 py-2 mt-2 text-gray-200 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="block w-full px-4 py-2 mt-2 text-gray-200 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40 "
                     />
                     {showPassword ? (
                       <AiFillEye
@@ -173,14 +202,17 @@ const Login = () => {
                         }}
                       />
                     )}
-                  </div>
+                  </div >
+                  <div className="-z-20 relative">
+
+                  
                   <p className="mt-4 text-center text-gray-200 dark:text-gray-400">
                     or sign in with
                   </p>
 
                   <a
                     href="#"
-                    className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                    className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 -z-20"
                   >
                     <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                       <path
@@ -205,11 +237,11 @@ const Login = () => {
                       Sign in with Google
                     </span>
                   </a>
-
-                  <div className="mt-6">
+                  </div>
+                  <div className="mt-6 ">
                     <button
                       onClick={handleSubmit}
-                      className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-green-400 focus:ring focus:ring-green-300 focus:ring-opacity-50"
+                      className=" w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-green-400 focus:ring focus:ring-green-300 focus:ring-opacity-50"
                     >
                       Sign in
                     </button>

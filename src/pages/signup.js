@@ -2,11 +2,11 @@ import { set } from "mongoose";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
-import { BiSolidUser } from "react-icons/bi";
-import { GiWaterRecycling } from "react-icons/gi";
+import { useRouter } from "next/router";
 import Spinner from "./components/Spinner";
 import Link from "next/link";
 const Signup = () => {
+  const router = useRouter();
   const [val1, setVal1] = useState(true);
   const [val2, setVal2] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -15,12 +15,6 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [cpassword, setcPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [pincode, setPincode] = useState("");
-  const [city, setCity] = useState("");
-  const [gst, setGst] = useState("");
-  const [state, setState] = useState("");
-  const [recycleUnitName, setcycleUnitName] = useState("");
   const handleChanges = (e) => {
     if (e.target.name == "name") {
       setName(e.target.value);
@@ -30,62 +24,34 @@ const Signup = () => {
       setPassword(e.target.value);
     } else if (e.target.name == "cpassword") {
       setcPassword(e.target.value);
-    } else if (e.target.name == "phone") {
-      setPhone(e.target.value);
-    } else if (e.target.name == "address") {
-      setAddress(e.target.value);
-    } else if (e.target.name == "pincode") {
-      setPincode(e.target.value);
-    } else if (e.target.name == "city") {
-      setCity(e.target.value);
-    } else if (e.target.name == "gst") {
-      setGst(e.target.value);
-    } else if (e.target.name == "state") {
-      setState(e.target.value);
-    } else if (e.target.name == "recycleUnitName") {
-      setcycleUnitName(e.target.value);
     }
   };
   const handleSubmit = async (e) => {
     setLoading(true);
+    console.log("hello")
     const datau = {
       name: name,
       email: email,
       password: password,
-      phone: phone,
-      address: address,
     };
     const datar = {
       name: name,
       email: email,
       password: password,
-      phone: phone,
-      address: address,
-      pincode: pincode,
-      gst: gst,
-      state: state,
-      pincode,
-      city,
-      recycleUnitName,
     };
-    if (val1) {
+    if (router.query.user) {
       if (password != cpassword) {
         toast.error("Your Password and Confirm Password are not matched", {
           position: "top-center",
         });
         setLoading(false);
-      } else if (phone.length != 10) {
-        toast.error("Your Phone Number Is Invalid", {
-          position: "top-center",
-        });
-        setLoading(false);
-      } else if (email.length == 0) {
+      }  else if (email.length == 0) {
         toast.error("Please Enter Your Email", {
           position: "top-center",
         });
         setLoading(false);
       } else {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/usignup`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/signup`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -106,58 +72,20 @@ const Signup = () => {
           setLoading(false);
         }
       }
-    } else if (val2) {
+    } else if (router.query.recruiter) {
       if (password != cpassword) {
         toast.error("Your Password and Confirm Password are not matched", {
           position: "top-center",
         });
         setLoading(false);
-      } else if (phone.length != 10) {
-        toast.error("Your Phone Number Is Invalid", {
-          position: "top-center",
-        });
-        setLoading(false);
-      } else if (email.length == 0) {
+      }  else if (email.length == 0) {
         toast.error("Please Enter Your Email", {
           position: "top-center",
         });
         setLoading(false);
-      } else if (recycleUnitName.length <= 2) {
-        toast.error(
-          "Please Enter Your RecyclingUnit Name above two characters",
-          {
-            position: "top-center",
-          }
-        );
-        setLoading(false);
-      } else if (gst.length != 15) {
-        toast.error("Please enter a valid gst number", {
-          position: "top-center",
-        });
-        setLoading(false);
-      } else if (address.length <= 5) {
-        toast.error("Please enter your address above 5 characters", {
-          position: "top-center",
-        });
-        setLoading(false);
-      } else if (pincode.length != 6) {
-        toast.error("Please enter a valid pincode", {
-          position: "top-center",
-        });
-        setLoading(false);
-      }
-      // else if(city.length<=2){
-      //     toast.error('Please enter a valid city name', {
-      //         position: "top-center",
-      //       })
-      // }
-      else if (state.length <= 2) {
-        toast.error("Please enter a valid state name", {
-          position: "top-center",
-        });
-        setLoading(false);
-      } else {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/rsignup`, {
+      } 
+      else {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/recuitersignup`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -178,7 +106,46 @@ const Signup = () => {
           setLoading(false);
         }
       }
+
     }
+    else if (router.query.admin) {
+      if (password != cpassword) {
+        toast.error("Your Password and Confirm Password are not matched", {
+          position: "top-center",
+        });
+        setLoading(false);
+      }  else if (email.length == 0) {
+        toast.error("Please Enter Your Email", {
+          position: "top-center",
+        });
+        setLoading(false);
+      } 
+      else {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/adminsignup`, {
+          method: "POST", // or 'PUT'
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(datar),
+        });
+        const response = await res.json();
+        console.log(response);
+        if (response.success) {
+          toast.success("Your account has been created successfully.", {
+            position: "top-right",
+          });
+          setLoading(false);
+        } else if (!response.success) {
+          toast.error(`${response.message}`, {
+            position: "top-right",
+          });
+          setLoading(false);
+        }
+      }
+
+    }
+    
+    
   };
   return (
     <div>
@@ -229,80 +196,7 @@ const Signup = () => {
                     />
                   </div>
 
-                  {val2 ? (
-                    <>
-                      <div>
-                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                          Recycling Unit Name
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Example Recycling Unit"
-                          value={recycleUnitName}
-                          name="recycleUnitName"
-                          onChange={handleChanges}
-                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">
-                          GSTIN
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="2230KKBKI890"
-                          name="gst"
-                          value={gst}
-                          onChange={handleChanges}
-                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">
-                          Address
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="ex:-24 sector New Delhi ,lane Road"
-                          name="address"
-                          value={address}
-                          onChange={handleChanges}
-                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">
-                          State
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="ex:-Odisha"
-                          name="state"
-                          value={state}
-                          onChange={handleChanges}
-                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                      </div>
-                      <div>
-                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">
-                          Pin / Zip Code
-                        </label>
-                        <input
-                          type="number"
-                          placeholder="ex:-754293"
-                          name="pincode"
-                          value={pincode}
-                          onChange={handleChanges}
-                          className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                      </div>
-                    </>
-                  ) : (
-                    ""
-                  )}
+                  
                   <div>
                     <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">
                       Password
@@ -332,7 +226,7 @@ const Signup = () => {
                   </div>
 
                   <button
-                    className="flex items-center justify-center w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50 h-14"
+                    className=" flex items-center justify-center w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50 h-14"
                     onClick={handleSubmit}
                   >
                     <span>Sign Up </span>
@@ -350,7 +244,7 @@ const Signup = () => {
                       />
                     </svg>
                   </button>
-                  <div className="">
+                  <div className="relative -z-20">
                     <a
                       href="#"
                       className="flex items-center justify-center p-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -375,7 +269,7 @@ const Signup = () => {
                       </svg>
 
                       <span className="mx-2 text-gray-200">
-                        Sign in with Google
+                        Sign up with Google
                       </span>
                     </a>
                   </div>

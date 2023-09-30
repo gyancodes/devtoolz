@@ -13,11 +13,12 @@ const handler = async (req, res) => {
               pass: 'O1aXMRNItUmjprkD'
             }
           });
-        console.log(req.body)
+        console.log(req.body,"iam admin")
     let eUser= await Admin.find({email:req.body.email});
     let pUser=await Admin.find({phone:req.body.phone});
     if(eUser.length>0){
         res.status(400).json({success:false,message:"An user with This email already exists"});
+        console.log(eUser)
     }
     else if(pUser.length>0){
         res.status(400).json({success:false,message:"An user with This phone already exists"});
