@@ -52,7 +52,9 @@ const FindJobs = () => {
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="font-semibold  text-white">Management</h3>
+                    <h3 className="font-semibold  text-white">
+                      Web Development
+                    </h3>
                     <p className="text-sm text-white">4 job positions</p>
                   </div>
                   <div className="pl-3">
@@ -122,7 +124,7 @@ const FindJobs = () => {
                   </div>
                   <div className="pl-3">
                     <svg
-                      className="w-3.5 h-3.5 text-gray-500"
+                      className="w-3.5 h-3.5 text-white"
                       width={16}
                       height={16}
                       viewBox="0 0 16 16"
@@ -143,20 +145,20 @@ const FindJobs = () => {
 
             {/* Card */}
             <a
-              className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+              className="group flex flex-col infocard border shadow-sm rounded-xl hover:shadow-md transition  dark:border-gray-800"
               href="#"
             >
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
+                    <h3 className=" font-semibold text-white  ">
                       Content Writer
                     </h3>
-                    <p className="text-sm text-gray-500">10 job positions</p>
+                    <p className="text-sm text-white">10 job positions</p>
                   </div>
                   <div className="pl-3">
                     <svg
-                      className="w-3.5 h-3.5 text-gray-500"
+                      className="w-3.5 h-3.5 text-white"
                       width={16}
                       height={16}
                       viewBox="0 0 16 16"
@@ -176,20 +178,18 @@ const FindJobs = () => {
             {/* End Card */}
             {/* Card */}
             <a
-              className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+              className="group flex flex-col infocard border shadow-sm rounded-xl hover:shadow-md transition  dark:border-gray-800"
               href="#"
             >
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                      Analytics
-                    </h3>
-                    <p className="text-sm text-gray-500">14 job positions</p>
+                    <h3 className=" font-semibold text-white ">Analytics</h3>
+                    <p className="text-sm text-white">14 job positions</p>
                   </div>
                   <div className="pl-3">
                     <svg
-                      className="w-3.5 h-3.5 text-gray-500"
+                      className="w-3.5 h-3.5 text-white"
                       width={16}
                       height={16}
                       viewBox="0 0 16 16"
