@@ -39,7 +39,7 @@ html{
 .animate-floating:hover {
   animation: floating 1s ease-in-out infinite;
 }
-.animate-floating {
+.animate-floating1 {
   animation: floating 1s ease-in-out infinite;
 }
 .race-by {

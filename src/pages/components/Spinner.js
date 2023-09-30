@@ -7,7 +7,7 @@ const Spinner = () => {
       <img
                 src="/asset/Devtoolzlogo-nobg.png"
                 alt=""
-                className="h-1/8 w-28 -scale-75 animate-floating"
+                className="h-1/8 w-28 -scale-75 animate-floating1"
               />
               <div class="race-by"></div>
       </div>
