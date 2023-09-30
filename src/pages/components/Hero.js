@@ -6,7 +6,7 @@ const Hero = () => {
       <img
         className="absolute top-0 left-0"
         style={{}}
-        src="https://app.nhost.io/assets/line-grid.svg"
+        src="asset/line-grid.svg"
         alt="helo"
       />
       <div

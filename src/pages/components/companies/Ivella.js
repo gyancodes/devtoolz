@@ -16,7 +16,7 @@ const Ivella = () => {
           <h2 className="text-white text-4xl  ">Jobs</h2>
           <section className="flex py-10">
             <div>
-              <h3 className="text-white text-2xl">Software Engineer</h3>
+              <h3 className="text-white text-2xl">Open application</h3>
               <span className="text-white text-sm">Full Time</span>
             </div>
             
