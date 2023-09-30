@@ -22,7 +22,7 @@ const Team = () => {
               src="https://thinkscript.org/assets/gyan-043f3c69.jpg"
             />
             <div className="mt-2 sm:mt-4">
-              <h3 className="font-medium text-gray-800 dark:text-gray-200">
+              <h3 className="font-medium text-white">
                 Gyan Prakash Tiwari
               </h3>
             </div>
@@ -86,7 +86,7 @@ const Team = () => {
               src="https://thinkscript.org/assets/ani-c309e793.png"
             />
             <div className="mt-2 sm:mt-4">
-              <h3 className="font-medium text-gray-800 dark:text-gray-200">
+              <h3 className="font-medium text-white">
                 Animesh Singh
               </h3>
             </div>
@@ -150,7 +150,7 @@ const Team = () => {
               src="https://thinkscript.org/assets/basir-97ef39f3.jpeg"
             />
             <div className="mt-2 sm:mt-4">
-              <h3 className="font-medium text-gray-800 dark:text-gray-200">
+              <h3 className="font-medium text-white">
                 Basir Khan
               </h3>
             </div>
