@@ -27,4 +27,15 @@ html{
   scroll-behavior: smooth;
 }
 
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px); /* Adjust this value to control the amount of movement */
+  }
+}
 
+.animate-floating:hover {
+  animation: floating 1s ease-in-out infinite;
+}

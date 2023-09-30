@@ -10,13 +10,16 @@ const Devresources = () => {
       </div>
       <div className="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-none">
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div
+              className="flex justify-center items-center w-12 h-12 bg-gradient-to-br
+             from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating ">
               <svg
-                className="w-7 h-7 text-white"
+                className="w-7 h-7 text-white "
                 xmlns="http://www.w3.org/2000/svg"
                 width={16}
                 height={16}
@@ -38,7 +41,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +89,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +112,9 @@ const Devresources = () => {
           {/* End Icon Block */}
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
-            {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            {/* Icon */} 
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +140,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +164,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +191,8 @@ const Devresources = () => {
           {/* Icon Block */}
           <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
             {/* Icon */}
-            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto">
+            <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-md mx-auto hover:scale-75
+             animate-floating">
               <svg
                 className="w-7 h-7 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +206,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Graphic design tools
               </h3>
             </div>
