@@ -89,7 +89,7 @@ fetchuser(email);
           <div className="flex lg:justify-between lg:flex-row text-white flex-col gap-8 items-center justify-center">
             <img
               class="w-24 h-24 rounded-full"
-              src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              src="https://avatars.githubusercontent.com/u/61907167?v=4"
               alt="Rounded avatar"
             />
             <div className="flex items-center gap-8 flex-col lg:flex-row">
@@ -101,6 +101,12 @@ fetchuser(email);
               </button>
             </div>
           </div>
+
+          <section className="flex flex-row">
+            <div className="flex flex-col gap-4">
+              
+            </div>
+          </section>
 
           <section className="flex flex-col py-10">
             <form onSubmit={handleSubmit}>

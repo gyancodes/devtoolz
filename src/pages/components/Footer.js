@@ -3,7 +3,13 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <section className="py-10 bg-black sm:pt-16 lg:pt-24 footer">
+      <style jsx global>{`
+      .footer{
+        background-color: #1b1b1b;
+      }
+
+      `}</style>
+      <section className="py-10  footer sm:pt-16 lg:pt-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
@@ -14,8 +20,9 @@ const Footer = () => {
               />
 
               <p className="text-base leading-relaxed text-gray-600 mt-7">
-              Our tools and resources enable lightning-fast web application and app development, 
-              accelerating your experience and streamlining the coding process for improved outcomes.
+                Our tools and resources enable lightning-fast web application
+                and app development, accelerating your experience and
+                streamlining the coding process for improved outcomes.
               </p>
 
               <ul className="flex items-center space-x-3 mt-9">
@@ -214,13 +221,13 @@ const Footer = () => {
                     name="email"
                     id="email"
                     placeholder="Enter your email"
-                    className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700"
+                  className="inline-flex items-center justify-center px-4 py-2 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700"
                 >
                   Subscribe
                 </button>
