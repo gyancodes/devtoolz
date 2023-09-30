@@ -86,7 +86,7 @@ const FindJobs = () => {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="font-semibold text-white ">
-                      App Development
+                      Mobile Development
                     </h3>
                     <p className="text-sm text-white">26 job positions</p>
                   </div>
@@ -119,8 +119,8 @@ const FindJobs = () => {
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className=" font-semibold text-white">UI Designer</h3>
-                    <p className="text-sm text-white">37 job positions</p>
+                    <h3 className=" font-semibold text-white">DevRel</h3>
+                    <p className="text-sm text-white">2 job positions</p>
                   </div>
                   <div className="pl-3">
                     <svg
@@ -151,41 +151,8 @@ const FindJobs = () => {
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className=" font-semibold text-white  ">
-                      Content Writer
-                    </h3>
+                    <h3 className=" font-semibold text-white  ">Devops</h3>
                     <p className="text-sm text-white">10 job positions</p>
-                  </div>
-                  <div className="pl-3">
-                    <svg
-                      className="w-3.5 h-3.5 text-white"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </a>
-            {/* End Card */}
-            {/* Card */}
-            <a
-              className="group flex flex-col infocard border shadow-sm rounded-xl hover:shadow-md transition  dark:border-gray-800"
-              href="#"
-            >
-              <div className="p-4 md:p-5">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h3 className=" font-semibold text-white ">Analytics</h3>
-                    <p className="text-sm text-white">14 job positions</p>
                   </div>
                   <div className="pl-3">
                     <svg
