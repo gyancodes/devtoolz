@@ -29,7 +29,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 PNG Resouces
               </h3>
             </div>
@@ -52,7 +52,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Icons blast
               </h3>
             </div>
@@ -75,7 +75,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Color resources
               </h3>
             </div>
@@ -98,7 +98,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 JPG resources
               </h3>
             </div>
@@ -124,7 +124,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Vectors and clip arts
               </h3>
             </div>
@@ -147,7 +147,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Image mockups
               </h3>
             </div>
@@ -173,7 +173,7 @@ const Devresources = () => {
             </div>
             {/* End Icon */}
             <div className="mt-3">
-              <h3 className="text-sm sm:text-base sm:text-lg font-semibold dark:text-gray-200">
+              <h3 className="text-sm sm:text-base sm:text-lg font-semibold text-gray-200">
                 Image compression
               </h3>
             </div>
