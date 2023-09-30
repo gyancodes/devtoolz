@@ -102,9 +102,11 @@ const Slug = () => {
                   A Python library for NLP that provides tools for tasks like
                   tokenization, stemming, tagging, parsing.
                 </p>
+                <a href="https://www.nltk.org/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -131,9 +133,11 @@ const Slug = () => {
                   A simple and easy-to-use NLP library for Python, offering
                   features like sentiment analysis.
                 </p>
+                <a href="https://textblob.readthedocs.io/en/dev/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -159,9 +163,11 @@ const Slug = () => {
                   Already mentioned in the previous list, SpaCy is a powerful
                   and efficient NLP library for Python.
                 </p>
+                <a href="https://spacy.io/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -186,9 +192,11 @@ const Slug = () => {
                   A JavaScript library for computer vision tasks, enabling image
                   and video analysis directly in the browser.
                 </p>
+                <a href="https://docs.opencv.org/3.4/df/d0a/tutorial_js_intro.html">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             {/* 2nd core */}
@@ -214,9 +222,11 @@ const Slug = () => {
                   A C++ library with Python bindings for various computer vision
                   tasks, including facial recognition and object detection.
                 </p>
+                <a href="http://dlib.net/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -241,9 +251,11 @@ const Slug = () => {
                   An open-source real-time object detection system that can be
                   used in web applications.
                 </p>
+                <a href="https://pjreddie.com/darknet/yolo/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -268,9 +280,11 @@ const Slug = () => {
                   An open-source framework for building conversational AI
                   chatbots. It offers both NLU and dialogue management .
                 </p>
+                <a href="https://rasa.com/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -295,9 +309,11 @@ const Slug = () => {
                   An open-source platform for building and managing chatbots and
                   conversational applications.
                 </p>
+                <a href="https://botpress.com/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             {/* 3rd core */}
@@ -323,9 +339,11 @@ const Slug = () => {
                   A Python scikit for building and analyzing recommendation
                   systems for different charts and systems.
                 </p>
+                <a href="https://pypi.org/project/scikit-surprise/1.0.2/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -350,9 +368,11 @@ const Slug = () => {
                   An open-source automatic speech recognition (ASR) engine
                   involves voice recognition software.
                 </p>
+                <a href="https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -377,9 +397,11 @@ const Slug = () => {
                   A web API that allows you to integrate speech recognition and
                   synthesis into web applications.
                 </p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -404,9 +426,11 @@ const Slug = () => {
                   A set of high-quality implementations of reinforcement
                   learning algorithms in Python.
                 </p>
+                <a href="https://stable-baselines.readthedocs.io/en/master/">
                 <button class="flex mt-6 text-white bg-violet-700 border-0 py-2 px-5 focus:outline-none hover:bg-violet-900 rounded">
                   Learn more
                 </button>
+                </a>
               </div>
             </div>
           </div>
