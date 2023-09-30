@@ -76,6 +76,13 @@ const Navbar = () => {
               >
                 Discover Opportunity
               </Link>
+             
+              <Link
+                className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white "
+                href="/Issues"
+              >
+                Issues
+              </Link>
               <Link
                 className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white "
                 href="/Team"
