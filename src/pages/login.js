@@ -81,7 +81,7 @@ const Login = () => {
             JSON.stringify({ token: response.token, email: response.email })
           );
           setLoading(false);
-          // router.push("/");
+          router.push("/Admin");
         } else if (!response.success) {
           toast.error(`${response.message}`, {
             position: "top-right",
