@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Spinner from "./components/Spinner";
 import Link from "next/link";
+import { useAuth0 } from "@auth0/auth0-react";
 const Signup = () => {
   const router = useRouter();
+  const { loginWithRedirect } = useAuth0();
   const [val1, setVal1] = useState(true);
   const [val2, setVal2] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -244,10 +246,10 @@ const Signup = () => {
                       />
                     </svg>
                   </button>
-                  <div className="relative -z-20">
+                  <div className="">
                     <a
-                      href="#"
-                      className="flex items-center justify-center p-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                      onClick={() => loginWithRedirect()}
+                      className="flex items-center justify-center p-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-600"
                     >
                       <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                         <path

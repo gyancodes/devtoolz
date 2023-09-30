@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Footer = () => {
   return (
     <div>
@@ -154,25 +154,25 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/login?admin=true"
                     title=""
                     className="flex text-base text-gray-200 transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                   >
                     {" "}
-                    Customer Support{" "}
-                  </a>
+                    Admin Login{" "}
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/login?recruiter=true"
                     title=""
                     className="flex text-base text-gray-200 transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                   >
                     {" "}
-                    Delivery Details{" "}
-                  </a>
+                    Recruiter Login{" "}
+                  </Link>
                 </li>
 
                 <li>
