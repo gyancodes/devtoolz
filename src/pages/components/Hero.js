@@ -13,9 +13,9 @@ const Hero = () => {
         style={{
           animationDuration: "5s",
         }}
-        className="absolute w-[300px] h-[400px] md:w-[700px] md:h-[800px] md:animate-spin rounded-full -top-1/2 left-0 md:left-60 bg-purple-600/20 -z-30 blur-3xl"
+        className="absolute w-[300px] h-[400px] md:w-[700px] md:h-[800px] md:animate-spin rounded-full -top-1/2 left-0 md:left-60 bg-gradient-to-r from-slate-900 via-purple-900/60 to-slate-900 -z-50 blur-3xl"
       ></div>
-      <div className="overflow-x-hidden bg-none">
+      <div className="overflow-x-hidden bg-none relative">
         <style jsx global>{`
           @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato:ital,wght@1,900&family=Martel+Sans:wght@200&family=Poppins&family=Ubuntu:wght@500&display=swap");
 
@@ -28,7 +28,7 @@ const Hero = () => {
           }
         `}</style>
 
-        <section className="pt-12 bg-none sm:pt-16 relative">
+        <section className="pt-12 bg-none sm:pt-16 ">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center ">
               <h1 className="px-6 text-lg text-gray-200 ">
@@ -47,7 +47,7 @@ const Hero = () => {
                 <a
                   href="#Devtools"
                   title=""
-                  className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-purple-600 border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-purple-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                  className="inline-flex  items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-purple-600 border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-purple-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                   role="button"
                 >
                   Explore More

@@ -2,17 +2,22 @@ import React from "react";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <div className="sticky top-0 ">
+    <div className="sticky top-0 z-50">
       <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm sm:h-10 lg:h-24">
         <nav
           className="mt-6 backdrop-blur-lg relative max-w-7xl w-full border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto bg-none"
           aria-label="Global"
         >
           <div className="flex items-center justify-between ">
-            <Link href="/"
+            <Link
+              href="/"
               className="flex-none text-xl font-semibold dark:text-white text-white"
             >
-            <img src="/asset/Devtoolzlogo-nobg.png" alt="" className="h-5/6 w-28 "/>
+              <img
+                src="/asset/Devtoolzlogo-nobg.png"
+                alt=""
+                className="h-5/6 w-28 "
+              />
             </Link>
             <div className="md:hidden">
               <button
@@ -26,7 +31,6 @@ const Navbar = () => {
                   className="hs-collapse-open:hidden w-4 h-4"
                   width="16"
                   height="16"
-
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -69,12 +73,13 @@ const Navbar = () => {
               >
                 Work
               </a>
-              <a
+
+              <Link
                 className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white"
-                href="#"
+                href="/FindJobs"
               >
-                Blog
-              </a>
+                Find Jobs
+              </Link>
               <a
                 className="font-medium text-white hover:text-white md:py-6 dark:text-gray-white "
                 href="#"
@@ -87,9 +92,9 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link href="/login"
+              <Link
+                href="/login"
                 className="flex items-center gap-x-2 font-medium text-white hover:text-blue-600 md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
-                
               >
                 <svg
                   className="w-4 h-4"
