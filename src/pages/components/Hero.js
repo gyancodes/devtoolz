@@ -4,11 +4,24 @@ const Hero = () => {
   return (
     <div>
       <div className="overflow-x-hidden bg-none">
+        <style jsx global>{`
+          @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato:ital,wght@1,900&family=Martel+Sans:wght@200&family=Poppins&family=Ubuntu:wght@500&display=swap");
+
+          .hero-text {
+            font-family: "Dela Gothic One", cursive;
+            font-family: "Lato", sans-serif;
+            font-family: "Martel Sans", sans-serif;
+            font-family: "Poppins", sans-serif;
+            font-family: "Ubuntu", sans-serif;
+          }
+        `}</style>
         <section className="pt-12 bg-none sm:pt-16">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center ">
-              <h1 className="px-6 text-lg text-gray-200 font-inter">Welcome Devlopers 🧑‍💻</h1>
-              <p className="mt-5 text-4xl hero-text font-bold leading-tight text-white sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight">
+              <h1 className="px-6 text-lg text-gray-200 ">
+                Welcome Developers 🧑‍💻
+              </h1>
+              <p className="mt-5  hero-text font-bold leading-tight text-white sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-normal">
                 One Stop Solution For
                 {/* <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span> */}
                 <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
@@ -51,16 +64,14 @@ const Hero = () => {
                   Watch free demo
                 </a> */}
               </div>
-             
             </div>
           </div>
 
           <div className="pb-12 bg-none"></div>
         </section>
       </div>
-      <Stats/>
+      <Stats />
     </div>
-  
   );
 };
 
