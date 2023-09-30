@@ -6,10 +6,12 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
+import { useAuth0 } from "@auth0/auth0-react";
 import Spinner from "./components/Spinner";
 import { set } from "mongoose";
 const Login = () => {
   const router = useRouter();
+  const { loginWithRedirect } = useAuth0();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -164,7 +166,7 @@ const Login = () => {
                     />
                   </div>
 
-                  <div className="mt-6">
+                  <div className="mt-6 relative">
                     <div className="flex justify-between mb-2">
                       <label
                         htmlFor="password"
@@ -191,21 +193,29 @@ const Login = () => {
                     />
                     {showPassword ? (
                       <AiFillEye
-                        className="absolute right-2 text-2xl text-gray-200 bottom-2"
+                        className="absolute right-2 text-2xl text-gray-800 bottom-2"
                         onClick={() => {
                           setShowPassword(!showPassword);
                         }}
                       />
                     ) : (
                       <AiFillEyeInvisible
-                        className="absolute right-2 text-2xl text-gray-200 bottom-2"
+                        className="absolute right-2 text-2xl text-gray-800 bottom-2"
                         onClick={() => {
                           setShowPassword(!showPassword);
                         }}
                       />
                     )}
                   </div >
-                  <div className="-z-20 relative">
+                  <div className="mt-6 ">
+                    <button
+                      onClick={handleSubmit}
+                      className=" w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-green-400 focus:ring focus:ring-green-300 focus:ring-opacity-50"
+                    >
+                      Sign in
+                    </button>
+                  </div>
+                  <div className="">
 
                   
                   <p className="mt-4 text-center text-gray-200 dark:text-gray-400">
@@ -213,8 +223,9 @@ const Login = () => {
                   </p>
 
                   <a
-                    href="#"
-                    className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 -z-20"
+                  
+                    className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-600 -z-20"
+                    onClick={() => loginWithRedirect()}
                   >
                     <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                       <path
@@ -239,15 +250,9 @@ const Login = () => {
                       Sign in with Google
                     </span>
                   </a>
+                 
                   </div>
-                  <div className="mt-6 ">
-                    <button
-                      onClick={handleSubmit}
-                      className=" w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-purple-600 rounded-lg hover:bg-purple-800 focus:outline-none focus:bg-green-400 focus:ring focus:ring-green-300 focus:ring-opacity-50"
-                    >
-                      Sign in
-                    </button>
-                  </div>
+                 
                   <p className="mt-6 text-sm text-center text-gray-400">
                     Don&#x27;t have an account yet?{" "}
                     <Link

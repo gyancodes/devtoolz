@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import LoadingBar from "react-top-loading-bar";
 import Footer from "./components/Footer";
 import { Toaster, toast } from "react-hot-toast";
+import { Auth0Provider } from '@auth0/auth0-react';
+import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
@@ -39,6 +41,13 @@ export default function App({ Component, pageProps }) {
   };
   return (
     <>
+      <Auth0Provider
+    domain="dev-4cukx154jbcs0bw1.us.auth0.com"
+    clientId="0LShde6heEdU6GoP663Bw5R4kRQtSTbe"
+    authorizationParams={{
+      redirect_uri: typeof window !== 'undefined' ? window.location.origin : '',
+    }}
+  >
       <LoadingBar
         color="#ff0f7b"
         waitingTime={400}
@@ -49,6 +58,7 @@ export default function App({ Component, pageProps }) {
       <Navbar key={key} logout={logout} user={user} />
       {/* <HeroSection/> */}
       <Component {...pageProps} /> <Footer />
+      </Auth0Provider>
     </>
   );
 }
