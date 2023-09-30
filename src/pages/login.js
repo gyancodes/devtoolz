@@ -61,7 +61,7 @@ const Login = () => {
       } else if (router.query.admin) {
         setLoading(true);
         const data = { email, password };
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/adminlogin`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/alogin`, {
           method: "POST", // or 'PUT'
           headers: {
             "Content-Type": "application/json",
@@ -71,14 +71,15 @@ const Login = () => {
         const response = await res.json();
         console.log(response);
         if (response.success) {
-          toast.success("Recycler Logged in successfully", {
+          toast.success("Admin Logged in successfully", {
             position: "top-right",
           });
           localStorage.setItem(
-            "e-reviveRecycler",
+            "admindevtoolz",
             JSON.stringify({ token: response.token, email: response.email })
           );
           setLoading(false);
+          // router.push("/");
         } else if (!response.success) {
           toast.error(`${response.message}`, {
             position: "top-right",
@@ -86,10 +87,10 @@ const Login = () => {
           setLoading(false);
         }
       }
-    else if (router.query.recuiter) {
+    else if (router.query.recruiter) {
       setLoading(true);
       const data = { email, password };
-      const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/recuiterlogin`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/rlogin`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -103,10 +104,11 @@ const Login = () => {
           position: "top-right",
         });
         localStorage.setItem(
-          "e-reviveRecycler",
+          "recuiterdevtoolz",
           JSON.stringify({ token: response.token, email: response.email })
         );
         setLoading(false);
+        router.push("/")
       } else if (!response.success) {
         toast.error(`${response.message}`, {
           position: "top-right",
@@ -185,7 +187,7 @@ const Login = () => {
                       value={password}
                       onChange={handleChanges}
                       placeholder="Your Password"
-                      className="block w-full px-4 py-2 mt-2 text-gray-200 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40 "
+                      className="block w-full px-4 py-2 mt-2 text-black placeholder-gray-800 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40 "
                     />
                     {showPassword ? (
                       <AiFillEye
@@ -249,7 +251,7 @@ const Login = () => {
                   <p className="mt-6 text-sm text-center text-gray-400">
                     Don&#x27;t have an account yet?{" "}
                     <Link
-                      href={"/signup"}
+                      href={"/signup?user=true"}
                       className="text-purple-600 focus:outline-none focus:underline hover:underline"
                     >
                       Sign up

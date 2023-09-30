@@ -2,15 +2,17 @@ import React from 'react'
 
 const Spinner = () => {
   return (
-    <div className='h-[100vh] flex justify-center items-center'>
-     <div class="dot-wave">
-  <div class="dot-wave__dot"></div>
-  <div class="dot-wave__dot"></div>
-  <div class="dot-wave__dot"></div>
-  <div class="dot-wave__dot"></div>
-</div>
+    <div className='h-[80vh] flex justify-center items-center'>
+      <div className='flex flex-col items-center justify-center gap-4'>
+      <img
+                src="/asset/Devtoolzlogo-nobg.png"
+                alt=""
+                className="h-1/8 w-28 -scale-75 animate-floating"
+              />
+              <div class="race-by"></div>
+      </div>
 
-    </div>
+</div>
   )
 }
 
