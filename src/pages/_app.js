@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
     router.events.on("routeChangeComplete", () => {
       setProgress(100);
     });
-    const myUser = JSON.parse(localStorage.getItem("e-reviveUser"));
+    const myUser = JSON.parse(localStorage.getItem("DevToolzUser"));
     if (myUser) {
       setUser(true);
       setKey(Math.random());

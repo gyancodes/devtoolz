@@ -51,8 +51,8 @@ const Login = () => {
             JSON.stringify({ token: response.token, email: response.email })
           );
           setTimeout(() => {
-            router.push("/");
-          }, 2000);
+            router.push("/UserProfile");
+          }, 1000);
           setLoading(false);
         } else if (!response.success) {
           toast.error(`${response.message}`, {
