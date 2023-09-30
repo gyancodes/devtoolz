@@ -19,9 +19,12 @@
 }
 
 body {
-  background-color: rgb(15, 23, 42); /* You can replace this with your desired color */
+ background-color: #1b1b1b;
+ 
 }
 
 html{
   scroll-behavior: smooth;
 }
+
+

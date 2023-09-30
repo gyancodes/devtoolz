@@ -3,6 +3,18 @@ import Stats from "./Stats";
 const Hero = () => {
   return (
     <div>
+      <img
+        className="absolute top-0 left-0"
+        style={{}}
+        src="https://app.nhost.io/assets/line-grid.svg"
+        alt="helo"
+      />
+      <div
+        style={{
+          animationDuration: "5s",
+        }}
+        className="absolute w-[300px] h-[400px] md:w-[700px] md:h-[800px] md:animate-spin rounded-full -top-1/2 left-0 md:left-60 bg-purple-600/20 -z-30 blur-3xl"
+      ></div>
       <div className="overflow-x-hidden bg-none">
         <style jsx global>{`
           @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato:ital,wght@1,900&family=Martel+Sans:wght@200&family=Poppins&family=Ubuntu:wght@500&display=swap");
@@ -15,7 +27,8 @@ const Hero = () => {
             font-family: "Ubuntu", sans-serif;
           }
         `}</style>
-        <section className="pt-12 bg-none sm:pt-16">
+
+        <section className="pt-12 bg-none sm:pt-16 relative">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center ">
               <h1 className="px-6 text-lg text-gray-200 ">
